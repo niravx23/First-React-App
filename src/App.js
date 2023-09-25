@@ -2,13 +2,13 @@ import './App.css';
 import Alert from './components/Alert';
 import MyNavBar1 from './components/MyNavBar1';
 import TextForm from './components/TextForm';
-// import About from './components/About';
+import About from './components/About';
 
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 import { useState } from 'react';
 
@@ -51,21 +51,21 @@ function App() {
 
   return (
     <>
-      {/* <Router> */}
+      <Router>
 
         <MyNavBar1 propsObj={obj} title="Formatter" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
 
         <div className="container">
 
-          {/* <Routes>
+          <Routes>
             <Route  exact path="/about" element={<About mode={mode} toggleMode={toggleMode}/>} />
             <Route  exact path="/" element={<TextForm showAlert={showAlert} heading="Enter Text" mode={mode} />} />
-          </Routes> */}
-        <TextForm showAlert={showAlert} heading="Enter Text" mode={mode} />
+          </Routes>
+        {/* <TextForm showAlert={showAlert} heading="Enter Text" mode={mode} /> */}
         </div>
 
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
